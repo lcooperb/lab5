@@ -10,6 +10,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+
+	$('#friend-container a').click(function(e) {
+		e.preventDefault();
+		$(this).text(anagrammedName($(this).text()));
+	});
+
 }
 
 function anagrammedName(name) {
@@ -17,7 +23,7 @@ function anagrammedName(name) {
 	
 	if (name == "Doug Engelbart") {
 		return "Notable Grudge";
-	} 
+	}
 	else if (name == "Ivan Sutherland") {
 		return "Vandal Heist Run";
 	}
